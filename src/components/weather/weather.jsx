@@ -53,7 +53,8 @@ const Weather = () => {
             </Card.Title>
 
             <Card.Text className={style.weather_infos}>
-                <div> <DefaultWeather width="150px" height="150px"/></div>
+                <img src={`https://openweathermap.org/img/wn/${weatherData?.weather[0]?.icon}@2x.png`} width="200px" height="200px" alt='zzzz'/>
+                {/* TO DO : display image from folder svgs */}
                 <div className={style.temperature}>{(weatherData?.main.temp / 10).toFixed(1)} <Thermometer/></div>
                 <div className={style.separator}></div>
                 <div className={style.container_more_details}>
